@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "refresh playwright",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "first": "npx playwright test --project=chromium --headed",
+    "second": "npx playwright codegen http://localhost:4200/",
+    "report": "npx playwright test --project=chromium --headed --reporter=list",
+    "show-report": "npx playwright show-report",
+    "ui": "npx playwright test --project=chromium --headed --grep=ui",
+    "api": "npx playwright test --project=chromium --headed --grep=api",
+    "all": "npx playwright test --project=chromium --headed",
+    "runCode": "npx playwright test --project=chromium --headed --debug"
+
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Stefanandersson81/training.git"
